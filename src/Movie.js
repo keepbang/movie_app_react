@@ -14,7 +14,7 @@ function Movie({year,title,summary, poster, genres}){
                         {genres.length-1 > i?" / ":""}</span>
                 })}
             </div>
-            <p className="movie_summary">{summary}</p>
+            <p className="movie_summary">{summary.slice(0,300)}...</p>
         </div>
     </div>
 }
