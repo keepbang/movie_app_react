@@ -1,11 +1,12 @@
 .navigation {
     width: auto;
-    box-shadow: 3px 3px 3px 3px #999999;
+    box-shadow: 0px 0px 10px 5px #999999;
     height: auto;
     position: fixed;
     top: 20px;
     left: 20px;
     border-radius: 3px;
+    background-color: white;
 }
 
 .navigation .navi_menu {

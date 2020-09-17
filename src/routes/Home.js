@@ -3,12 +3,13 @@ import axios from 'axios';
 import Movie from "../components/Movie";
 import "./Home.css";
 
-function Home(){
+function Home(props){
 
   const [isLoading,setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
+    console.log(props);
     const {data:{ data : {movies}}} = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
     setMovies(movies);
     setIsLoading(false);
