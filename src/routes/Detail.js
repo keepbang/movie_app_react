@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 function Detail(props){
-    console.log(props);
+    useEffect(() => {
+        const {history,location} = props;
+        if(location.state === undefined){
+            history.push("/");
+        }
+    }, [])
     return (
         <span>Hello</span>
     )

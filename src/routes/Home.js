@@ -7,17 +7,30 @@ function Home(props){
 
   const [isLoading,setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState(1);
+  
+
+  const onPrevPage = () =>{
+    if(page > 1){
+      setPage(page - 1);
+    }
+    console.log(page);
+  }
+
+  const onNextPage = () =>{
+    setPage(page + 1);
+    console.log(page);
+  }
 
   const getMovies = async () => {
-    console.log(props);
-    const {data:{ data : {movies}}} = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
+    const {data:{ data : {movies}}} = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating&page='+page);
     setMovies(movies);
     setIsLoading(false);
   }
 
   useEffect(() => {
     getMovies();
-  }, [])
+  }, [page])
 
     return (
     <section className="container">
@@ -45,6 +58,10 @@ function Home(props){
           </div>
         )
     }
+      <div className="btn_area">
+            <div onClick={onPrevPage} className="page_btn">Prev</div>
+            <div onClick={onNextPage} className="page_btn">Next</div>
+      </div>
     </section>
     )
 }
