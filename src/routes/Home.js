@@ -1,29 +1,25 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import axios from 'axios';
 import Movie from "../components/Movie";
-import "./Home.css"
-class Home extends React.Component {
+import "./Home.css";
 
-  state = {
-    isLoading : true,
-    movies: []
-  }
+function Home(){
 
-  getMovies = async () => {
+  const [isLoading,setIsLoading] = useState(true);
+  const [movies, setMovies] = useState([]);
+
+  const getMovies = async () => {
     const {data:{ data : {movies}}} = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
-    this.setState({
-      movies,
-      isLoading : false
-    })
+    setMovies(movies);
+    setIsLoading(false);
   }
 
-  componentDidMount(){
-    this.getMovies();
-  }
+  useEffect(() => {
+    getMovies();
+  }, [])
 
-  render() {
-    const {isLoading, movies} = this.state;
-    return <section className="container">
+    return (
+    <section className="container">
       {isLoading 
         ? <div className="loader">
             <span className="loader_text">Loading...</span>
@@ -49,7 +45,7 @@ class Home extends React.Component {
         )
     }
     </section>
-  }
+    )
 }
 
 export default Home;

@@ -10,13 +10,25 @@ body {
     height: 100%;
 }
 
+#root{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+
 html,
 body,
-#root,
 .container {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.container {
+    padding-left: 20px;
 }
 
 .loader {
