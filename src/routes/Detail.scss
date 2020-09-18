@@ -1,0 +1,36 @@
+.movieDetail__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 50px;
+    color: white;
+    padding-top: 50px;
+
+    .movie__poster{
+        img{
+            width: 350px;
+        }
+    }
+
+    .movie__data{
+        width: 65%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .movie__title{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        
+        .movie__genres{
+            display: flex;
+            li:not(:last-child){
+                margin-right: 25px;
+            }            
+        }
+    }
+}
