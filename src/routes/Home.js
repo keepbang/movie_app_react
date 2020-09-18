@@ -2,6 +2,8 @@ import React,{useState, useEffect} from "react";
 import axios from 'axios';
 import Movie from "../components/Movie";
 import "./Home.css";
+import loading from '../img/loading.gif'
+
 
 function Home(props){
 
@@ -12,12 +14,14 @@ function Home(props){
 
   const onPrevPage = () =>{
     if(page > 1){
+      setIsLoading(true);
       setPage(page - 1);
     }
     console.log(page);
   }
 
   const onNextPage = () =>{
+    setIsLoading(true);
     setPage(page + 1);
     console.log(page);
   }
@@ -36,7 +40,7 @@ function Home(props){
     <section className="container">
       {isLoading 
         ? <div className="loader">
-            <span className="loader_text">Loading...</span>
+            <img src={loading} alt="loading"/>
           </div>
         : (
           <div className="movies">
