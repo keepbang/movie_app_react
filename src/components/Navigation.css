@@ -1,0 +1,31 @@
+.navigation {
+    width: auto;
+    box-shadow: 0px 0px 10px 5px #999999;
+    height: auto;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.navigation .navi_menu {
+    width: 120px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 36px;
+}
+
+.navigation .navi_menu:link{
+    color: #7D7D7D;
+}
+
+.navigation .navi_menu:visited{
+    color: #7D7D7D;
+}
+
+.navigation .navi_menu:hover{
+    background-color: #8AFFCC;
+    color: white;
+}

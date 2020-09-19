@@ -1,0 +1,11 @@
+.about_main{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #282c34;
+    font-size: large;
+}
