@@ -1,6 +1,6 @@
 # Movie App React
 
-React JS Fundamentals Course(2019 Update)!
+React JS Movie App Project!!
 
 ### Used Tech
 - React
