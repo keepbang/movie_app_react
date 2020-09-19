@@ -1,29 +1,35 @@
 .movieDetail__container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-top: 50px;
     color: white;
     padding-top: 50px;
 
     .movie__poster{
+        display: flex;
         img{
             width: 350px;
         }
     }
 
     .movie__data{
+
         width: 65%;
-        margin-top: 20px;
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+
         .movie__title{
-            font-size: 30px;
+            font-size: 50px;
             margin-bottom: 10px;
+        }
+
+        .movie__year, .movie__summary{
+            font-size: large;
         }
         
         .movie__genres{

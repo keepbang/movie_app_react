@@ -30,14 +30,14 @@ class MovieDetail extends React.Component{
                     <div className="movie__poster">
                         <img src={poster} alt={title} />
                     </div>
-                    <div className="movie__data">
+                    <span className="movie__data">
                         <h3 className="movie__title">{title}</h3>
                         <h5 className="movie__year">{year}</h5>
                         <ul className="movie__genres">
                             {genres.map((genre, idx) => (<li key={idx} className="genres__li">{genre}</li>))}
                         </ul>
                         <p className="movie__summary">{summary}</p>
-                    </div>
+                    </span>
                 </div>
                 )
         }
