@@ -20,9 +20,9 @@ React JS Movie App Project
 ### About
 ![Image](https://user-images.githubusercontent.com/38740455/96079587-13ad5a80-0ef0-11eb-810a-07a93d7298fc.png)
 
-### [Change page code]()
+### Change page code
+[Home.js](https://github.com/keepbang/movie_app_react/blob/master/src/routes/Home.js)
 ```
-   //Home.js
    .....
    const [page, setPage] = useState(1);
   
