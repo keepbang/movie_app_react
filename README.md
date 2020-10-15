@@ -2,10 +2,14 @@
 
 React JS Movie App Project
 
-### `Used Tech`
+## Used Tech 💻
 - React
 - sass
 - axios
 
-### `Page`
+## Page 🎇
 - [https://keepbang.github.io/movie_app_react/](https://keepbang.github.io/movie_app_react/)
+
+# Preview
+
+## Screenshots 📸
